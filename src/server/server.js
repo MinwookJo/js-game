@@ -1,24 +1,15 @@
-import { matchPath } from "react-router-dom";
-import express from "express";
+const express = require('express');
+const path = require('path');
 
-import renderer from "./middleware/renderer";
+const app = express();
+const port = 3000;
 
-/* eslint-disable import/prefer-default-export */
-export const app = express();
+app.use(express.static('dev'));
 
-app.use('/', (req, res) => {
-    res.render('index.html');
-})
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../dev', 'index.html'));
+});
 
-// internal api endpoints
-app.use(express.json());
-
-// renderer
-app.get("*", (req, res, next) => {
-  const activeRoute =
-    routes.find(route => matchPath(req.url, route)) || {};
-
-  beforeRender
-    .then((data) => renderer(storeHandler(data, req))(req, res, next))
-    .catch(next);
+app.listen(port, () => {
+  console.log('start ', port);
 });
