@@ -19,7 +19,7 @@ function keyUpHandler(e) {
     }
 }
 
-export function initEvent() {
+function initEvent() {
     document.addEventListener('keydown', keyDownHandler, false);
     document.addEventListener('keyup', keyUpHandler, false);
 }

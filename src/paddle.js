@@ -1,7 +1,6 @@
 export default class paddle {
-    constructor(ctx, canvas, width, height, color, initX, initY) {
+    constructor(ctx, width, height, color, initX, initY) {
         this.ctx = ctx; // required
-        this.canvas = canvas; // required
 
         this.color = color;
         this.width = width;
@@ -19,5 +18,14 @@ export default class paddle {
         this.ctx.fillStyle = this.color;
         this.ctx.fill();
         this.ctx.closePath();
+    }
+
+    move(leftPressed, rightPressed, leftRange, rightRange) {
+        if(leftPressed && this.x > leftRange) {
+            this.x -= 7;
+        }
+        else if(rightPressed && this.x < rightRange) {
+            this.x += 7;
+        }
     }
 }
