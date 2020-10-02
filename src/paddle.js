@@ -1,4 +1,13 @@
 export default class paddle {
+    /**
+     * 
+     * @param {CanvasRenderingContext2D} ctx 2d 컨텍스트 객체
+     * @param {Number} width // 넓이
+     * @param {Number} height // 높이
+     * @param {String} color // 색깔
+     * @param {Number} initX // 초기화 x좌표
+     * @param {NUmber} initY // 초기화 y좌표
+     */
     constructor(ctx, width, height, color, initX, initY) {
         this.ctx = ctx; // required
 
@@ -20,6 +29,12 @@ export default class paddle {
         this.ctx.closePath();
     }
 
+    /**
+     * @param {*} leftPressed 왼쪽 키보드 press 여부 
+     * @param {*} rightPressed 오른쪽 키보드 press 여부
+     * @param {*} leftRange 패들이 움직일 수 있는 왼쪽 범위
+     * @param {*} rightRange 패들이 움직일 수 있는 오른쪽 범위
+     */
     move(leftPressed, rightPressed, leftRange, rightRange) {
         if(leftPressed && this.x > leftRange) {
             this.x -= 7;

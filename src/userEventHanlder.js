@@ -1,5 +1,5 @@
-export var leftPressed = false;
-export var rightPressed = false;
+export let leftPressed = false;
+export let rightPressed = false;
 
 function keyDownHandler(e) {
     if(e.keyCode === 39) {
