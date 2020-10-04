@@ -2,6 +2,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 const client = {
     devServer: {
         contentBase: path.join(__dirname, 'dev'),
@@ -12,7 +14,7 @@ const client = {
         app: ['./src/game.js']
     },
     output: {
-        path: path.join(__dirname, 'dev'),
+        path: isDevelopment ? path.join(__dirname, 'dev') : path.join(__dirname, 'build'),
         filename: 'game.js',
         publicPath: '/'
     },

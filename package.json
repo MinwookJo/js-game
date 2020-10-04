@@ -5,9 +5,9 @@
   "main": "ball.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:dev": "webpack-dev-server",
+    "start:dev": "webpack-dev-server",
     "build": "rm -rf ./build && webpack -w --mode production --config webpack.config.js",
-    "server": "node ./src/server/server.js"
+    "start": "npm run build && node ./src/server/server.js"
   },
   "author": "",
   "license": "ISC",
