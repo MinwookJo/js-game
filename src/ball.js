@@ -39,7 +39,7 @@ export default class ball {
         } else if(this.y > canvasHeight) { // 하단 y좌표 캔버스 밖으로 빠지면 사라짐
             this.x = -50;
             this.y = -50;
-        } else if(this.y  + this.movementY + paddleHeight > canvasHeight-this.radius) { // paddle에 y좌표와 맞고,
+        } else if(this.y + this.movementY + this.radius > canvasHeight - paddleHeight) { // paddle에 y좌표와 맞고,
             if(this.x > paddleX && this.x < paddleX + paddleWidth) { // paddle에 x좌표에 맞으면
                 this.movementY = -this.movementY; // 반대로이동
             }
