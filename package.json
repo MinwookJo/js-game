@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server:dev": "webpack-dev-server",
     "server:start": "node ./src/server/server.js",
-    "build": "rm -rf ./build && webpack -w --mode production --config webpack.config.js",
+    "build": "rm -rf ./build && webpack --mode production --config webpack.config.js",
     "start": "node ./src/server/server.js"
   },
   "author": "",
