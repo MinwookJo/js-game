@@ -6,7 +6,7 @@ import { rightPressed, leftPressed } from './userEventHanlder';
 
 const canvas = document.getElementById("canvas"); // get canvas element from index.html
 const ctx = canvas.getContext("2d"); // get 2d context
-const keyColor = '#e6524b'; // theme color
+const keyColor = '#15a60c'; // theme color
 
 const ball = new Ball(ctx, 10, keyColor, canvas.width/2, canvas.height/2, 3); // construct ball class
 const paddle = new Paddle(ctx, 75, 10, keyColor, canvas.width/2 , canvas.height - 15); // construct paddle class
