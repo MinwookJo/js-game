@@ -8,7 +8,7 @@
     "server:dev": "webpack-dev-server",
     "server:start": "node ./src/server/server.js",
     "build": "rm -rf ./build && webpack -w --mode production --config webpack.config.js",
-    "start": "npm run build && node ./src/server/server.js"
+    "start": "node ./src/server/server.js"
   },
   "author": "",
   "license": "ISC",
